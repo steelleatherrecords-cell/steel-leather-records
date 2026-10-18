@@ -18,11 +18,14 @@ sidebar {
   border-right: 2px solid #000000;
 }
 
-sidebar h1 {
-  font-size: 1.4rem;
+/* Λογότυπο στο μενού */
+.sidebar-logo {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  display: block;
   margin-bottom: 30px;
-  text-transform: uppercase;
-  font-weight: bold;
+  border: 1px solid #000000;
 }
 
 sidebar nav {
@@ -71,7 +74,6 @@ h2 {
   background-color: #ffffff;
 }
 
-/* Εικόνες στο μισό μέγεθος */
 .release-card img {
   width: 100%;
   max-width: 200px;
@@ -99,7 +101,6 @@ h2 {
   margin: 0 auto;
 }
 
-/* Μεγαλύτερα & Bold γράμματα */
 .release-cat {
   font-weight: bold;
   font-size: 1.2rem;
