@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Steel Leather Records</title>
   <link rel="stylesheet" href="style.css">
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
   
   <style>
     /* Styling για το Pop-up Modal */
@@ -33,9 +32,119 @@
     .popup-content {
       background: #fff;
       color: #000;
-      padding: 25px;
-      border-radius: 8px;
+      padding: 30px;
+      border-radius: 6px;
       position: relative;
       width: 90%;
-      max-width: 500px;
-      box-shadow:
+      max-width: 450px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 26px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    .popup-content h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .popup-content label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .popup-content input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .popup-content input[type="submit"] {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .popup-content input[type="submit"]:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <sidebar>
+    <a href="index.html">
+      <img src="r2_3.jpg" alt="Steel Leather Records" class="sidebar-logo">
+    </a>
+    <a href="index.html">Home</a>
+    <a href="releases.html">Releases</a>
+    <a href="distro.html">Distro</a>
+    <a href="links.html">Links</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </sidebar>
+
+  <main>
+    <h2>Welcome</h2>
+    <p>Official website of Steel Leather Records.</p>
+    <br>
+    <p><strong>12/10/2026</strong><br>
+    SLR 001, Wallop - Metallic Alps official vinyl reissue.</p>
+  </main>
+
+  <!-- Newsletter Pop-up Modal -->
+  <div class="popup-overlay" id="newsletterPopup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      
+      <h2>Subscribe</h2>
+      <form action="https://steelleatherrecords.us19.list-manage.com/subscribe/post?u=c9d06a994d9d43856945a517f&amp;id=6798d17341&amp;f_id=007ad7e4f0" method="post" target="_blank">
+        <label for="mce-EMAIL">Email Address *</label>
+        <input type="email" name="EMAIL" id="mce-EMAIL" required>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_c9d06a994d9d43856945a517f_6798d17341" tabindex="-1" value="">
+        </div>
+        <input type="submit" value="Subscribe">
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    // Εμφάνιση Pop-up αν δεν το έχει κλείσει ο χρήστης
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!localStorage.getItem('slr_popup_closed')) {
+        setTimeout(() => {
+          document.getElementById('newsletterPopup').classList.add('active');
+        }, 1000);
+      }
+    });
+
+    function closePopup() {
+      document.getElementById('newsletterPopup').classList.remove('active');
+      localStorage.setItem('slr_popup_closed', 'true');
+    }
+  </script>
+
+</body>
+</html>
