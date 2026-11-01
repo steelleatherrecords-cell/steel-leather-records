@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Releases - Steel Leather Records</title>
   <style>
-    /* Βασικό Layout για Sidebar & Main (ίδιο με το style.css) */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -23,6 +22,8 @@
       display: flex;
       flex-direction: column;
       padding-top: 20px;
+      box-sizing: border-box;
+      z-index: 100;
     }
     sidebar a {
       color: #fff;
@@ -41,12 +42,11 @@
       display: block;
     }
     main {
-      margin-left: 240px;
+      margin-left: 220px;
       padding: 40px;
       flex-grow: 1;
+      box-sizing: border-box;
     }
-    
-    /* Releases Grid Styles */
     .releases-grid {
       display: flex;
       gap: 30px;
@@ -63,7 +63,6 @@
       height: auto;
       border: 1px solid #ddd;
       display: block;
-      transition: opacity 0.2s;
     }
     .release-card img:hover {
       opacity: 0.8;
@@ -73,7 +72,7 @@
       font-size: 15px;
     }
 
-    /* Modal Styles */
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -112,9 +111,6 @@
       font-weight: bold;
       cursor: pointer;
       color: #000;
-    }
-    .close-modal:hover {
-      color: #666;
     }
     .modal-content h2 {
       margin-top: 0;
@@ -172,11 +168,8 @@
   <div id="wallopModal" class="modal">
     <div class="modal-content">
       <span class="close-modal" onclick="closeModal('wallopModal')">&times;</span>
-      
       <img src="wallop.jpg" alt="Wallop - Metallic Alps" class="modal-cover-img">
-      
       <h2>WALLOP – METALLIC ALPS</h2>
-      
       <p><strong>Germany, 1985 · The sound of an uncompromising era</strong></p>
       <p>There was a time when Heavy Metal was loud, hungry and unapologetic.</p>
       <p>A time of leather jackets, denim, long hair, battered amplifiers and rehearsal rooms filled with the sound of guitars turned up to eleven. Weekends meant gigs, cold beer, new records and nights that seemed to have no end. Somewhere between the local metal club and the next rehearsal, young musicians were building their own world — one riff at a time.</p>
@@ -201,11 +194,8 @@
   <div id="unicornModal" class="modal">
     <div class="modal-content">
       <span class="close-modal" onclick="closeModal('unicornModal')">&times;</span>
-      
       <img src="unicorn.jpg" alt="Unicorn - The Legend Returns" class="modal-cover-img">
-      
       <h2>UNICORN – THE LEGEND RETURNS</h2>
-      
       <p><strong>Germany, 1987 · The spirit of a generation</strong></p>
       <p>There was a time when Heavy Metal was more than music. It was a way of life.</p>
       <p>It was the excitement of discovering a new band, the sound of amplifiers roaring in a rehearsal room, the smell of beer and cigarette smoke, the long nights spent talking about records, guitars, concerts and everything that seemed possible. It was youth, friendship, ambition and the absolute belief that tomorrow could belong to you.</p>
