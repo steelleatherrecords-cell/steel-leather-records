@@ -5,6 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Releases - Steel Leather Records</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .releases-grid {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .release-card {
+      cursor: pointer;
+      width: 250px;
+      text-align: center;
+    }
+    .release-card img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      transition: opacity 0.2s;
+    }
+    .release-card img:hover {
+      opacity: 0.8;
+    }
+    .release-card h3 {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      overflow-y: auto;
+    }
+    .modal-content {
+      background-color: #fff;
+      color: #000;
+      margin: 5% auto;
+      padding: 40px;
+      width: 80%;
+      max-width: 700px;
+      border-radius: 6px;
+      position: relative;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .modal-content h2 {
+      margin-top: 0;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+    .modal-content p {
+      margin-bottom: 15px;
+      white-space: pre-line;
+    }
+    .modal-content a {
+      color: #000;
+      font-weight: bold;
+      word-break: break-all;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,32 +95,117 @@
 
   <main>
     <h2>Releases</h2>
+    <p>Official vinyl and tape reissues from Steel Leather Records.</p>
 
     <div class="releases-grid">
-      
-      <!-- SLR 001 -->
-      <div class="release-card">
-        <img src="IMG-752b994fef0eaf3f0e8e0a2d1df31484-V.jpg" alt="Wallop - Metallic Alps">
-        <div class="release-cat">SLR 001</div>
-        <div class="release-title">Wallop - Metallic Alps</div>
+      <!-- WALLOP RELEASE -->
+      <div class="release-card" onclick="openModal('wallopModal')">
+        <img src="wallop.jpg" alt="Wallop - Metallic Alps">
+        <h3>SLR001: Wallop - Metallic Alps</h3>
       </div>
 
-      <!-- SLR 002 -->
-      <div class="release-card">
-        <img src="file_00000000fed481f49d46573c60886aab.jpg" alt="Unicorn - The Legend Returns">
-        <div class="release-cat">SLR 002</div>
-        <div class="release-title">Unicorn - The Legend Returns</div>
+      <!-- UNICORN RELEASE -->
+      <div class="release-card" onclick="openModal('unicornModal')">
+        <img src="unicorn.jpg" alt="Unicorn - The Legend Returns">
+        <h3>SLR002: Unicorn - The Legend Returns</h3>
       </div>
-
-      <!-- SLR 003 -->
-      <div class="release-card">
-        <div class="placeholder-cover">TBA</div>
-        <div class="release-cat">SLR 003</div>
-        <div class="release-title">To Be Announced</div>
-      </div>
-
     </div>
   </main>
+
+  <!-- MODAL FOR WALLOP -->
+  <div id="wallopModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('wallopModal')">&times;</span>
+      <h2>WALLOP – METALLIC ALPS</h2>
+      <p>Germany, 1985 · The sound of an uncompromising era
+
+There was a time when Heavy Metal was loud, hungry and unapologetic.
+
+A time of leather jackets, denim, long hair, battered amplifiers and rehearsal rooms filled with the sound of guitars turned up to eleven. Weekends meant gigs, cold beer, new records and nights that seemed to have no end. Somewhere between the local metal club and the next rehearsal, young musicians were building their own world — one riff at a time.
+
+This was the atmosphere of the mid-1980s. Across Germany and the rest of Europe, Heavy Metal was alive with ambition. Bands were pushing their sound, chasing bigger stages and dreaming of making their mark. There were no guarantees, no shortcuts and certainly no promises of success. Just music, determination and the desire to play as loud as humanly possible.
+
+WALLOP were part of that world.
+
+Released in 1985, Metallic Alps stands as a genuine piece of German Heavy Metal from that era. A record shaped by the energy and attitude of a generation that lived for its music. No elaborate concepts, no unnecessary decoration — just the unmistakable spirit of a band with its own sound and something to say.
+
+Records like this remind us of what made the underground Heavy Metal scene so special. The excitement of discovering an obscure band, the thrill of hearing a killer riff for the first time, the friendships formed around records and concerts, and the feeling that somewhere out there, another great band was waiting to be discovered.
+
+Metallic Alps belongs to that tradition.
+
+It takes us back to a time when a band's reputation could travel from one fan to another, from one concert to the next, and when finding a forgotten Heavy Metal record felt like striking gold.
+
+Four decades later, its spirit remains intact.
+
+This is not about looking back and pretending that everything was perfect. It is about recognising the passion, the attitude and the music that made those years unforgettable.
+
+WALLOP – METALLIC ALPS.
+
+A genuine piece of 1980s German Heavy Metal, brought back to vinyl for a new generation of metal maniacs — and for those who never stopped believing in the old ways.
+
+The steel never rusts...
+
+STEEL LEATHER RECORDS · SLR001
+
+Back on vinyl after 41 years.
+
+Listen the remastered version of the LP below:
+<a href="https://youtu.be/6HW8ad7zp8M?si=Wj348hR-uW4neFVG" target="_blank" rel="noopener noreferrer">https://youtu.be/6HW8ad7zp8M?si=Wj348hR-uW4neFVG</a></p>
+    </div>
+  </div>
+
+  <!-- MODAL FOR UNICORN -->
+  <div id="unicornModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('unicornModal')">&times;</span>
+      <h2>UNICORN – THE LEGEND RETURNS</h2>
+      <p>Germany, 1987 · The spirit of a generation
+
+There was a time when Heavy Metal was more than music. It was a way of life.
+
+It was the excitement of discovering a new band, the sound of amplifiers roaring in a rehearsal room, the smell of beer and cigarette smoke, the long nights spent talking about records, guitars, concerts and everything that seemed possible. It was youth, friendship, ambition and the absolute belief that tomorrow could belong to you.
+
+In the heart of the 1980s, when Heavy Metal was spreading through every corner of Europe, countless young bands were chasing the same dream: to write their own songs, get on stage, turn the volume up and make themselves heard.
+
+Unicorn were part of that generation.
+
+Released in Germany in 1987, The Legend Returns captures something that cannot be manufactured or recreated: the genuine spirit of an era. Four tracks carrying the energy, enthusiasm and youthful determination of a band with something to prove and a world to discover.
+
+This is Heavy Metal from a time when dreams were bigger than budgets, rehearsal rooms were sacred places, and every gig was an opportunity to make history — at least for one unforgettable night.
+
+There is a particular charm to records like this. They take us back to a scene built on passion rather than expectations, where bands played because they had to, where friendships were forged around music, and where the next concert always felt like the most important event in the world.
+
+Nearly four decades later, the music still carries that spirit.
+
+The Legend Returns is not simply a document of a forgotten German Heavy Metal band. It is a small window into a world that existed, a reminder of the people, the dreams and the countless nights that made the 1980s underground metal scene what it was.
+
+Four songs. One band. One moment in time.
+
+And a legend that deserves to be heard again.
+
+STEEL LEATHER RECORDS · SLR002
+
+Back on vinyl. The legend returns.
+
+Listen the four track remastered version below:
+<a href="https://youtu.be/o7JgRc0owAw?si=yRNZmQNpbQ5M3oBQ" target="_blank" rel="noopener noreferrer">https://youtu.be/o7JgRc0owAw?si=yRNZmQNpbQ5M3oBQ</a></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+    // Κλείσιμο modal αν ο χρήστης πατήσει έξω από το παράθυρο
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+      }
+    }
+  </script>
 
 </body>
 </html>
