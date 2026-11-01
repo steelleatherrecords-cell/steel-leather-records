@@ -46,14 +46,22 @@
     .modal-content {
       background-color: #fff;
       color: #000;
-      margin: 5% auto;
-      padding: 40px;
-      width: 80%;
-      max-width: 700px;
+      margin: 3% auto;
+      padding: 30px;
+      width: 85%;
+      max-width: 650px;
       border-radius: 6px;
       position: relative;
-      font-family: Arial, sans-serif;
+      font-family: monospace, Arial, sans-serif;
       line-height: 1.6;
+    }
+    .modal-cover-img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px auto;
+      border: 1px solid #ccc;
     }
     .close-modal {
       position: absolute;
@@ -65,8 +73,9 @@
     }
     .modal-content h2 {
       margin-top: 0;
-      font-size: 22px;
+      font-size: 20px;
       text-transform: uppercase;
+      text-align: center;
     }
     .modal-content p {
       margin-bottom: 15px;
@@ -116,6 +125,9 @@
   <div id="wallopModal" class="modal">
     <div class="modal-content">
       <span class="close-modal" onclick="closeModal('wallopModal')">&times;</span>
+      
+      <img src="wallop.jpg" alt="Wallop - Metallic Alps" class="modal-cover-img">
+      
       <h2>WALLOP – METALLIC ALPS</h2>
       <p>Germany, 1985 · The sound of an uncompromising era
 
@@ -158,6 +170,9 @@ Listen the remastered version of the LP below:
   <div id="unicornModal" class="modal">
     <div class="modal-content">
       <span class="close-modal" onclick="closeModal('unicornModal')">&times;</span>
+      
+      <img src="unicorn.jpg" alt="Unicorn - The Legend Returns" class="modal-cover-img">
+      
       <h2>UNICORN – THE LEGEND RETURNS</h2>
       <p>Germany, 1987 · The spirit of a generation
 
@@ -199,7 +214,6 @@ Listen the four track remastered version below:
     function closeModal(modalId) {
       document.getElementById(modalId).style.display = 'none';
     }
-    // Κλείσιμο modal αν ο χρήστης πατήσει έξω από το παράθυρο
     window.onclick = function(event) {
       if (event.target.classList.contains('modal')) {
         event.target.style.display = 'none';
